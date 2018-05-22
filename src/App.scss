@@ -1,0 +1,46 @@
+// SASS COLOR OVERRIDE VARIABLES: WW5-AA-THEME COLORS:
+$mdc-theme-primary: #00096c;
+$mdc-theme-on-secondary: rgb(29, 173, 0);
+$mdc-theme-secondary: #b2ebf2;
+$mdc-theme-on-secondary: rgb(151, 0, 13);
+// $mdc-theme-background: #ecf0f2;
+$mdc-theme-background: #fcff3d;
+$mdc-typography-font-family: 'IBM Plex Mono', monospace;
+// INDIVIDUAL TYPE STYLE OVERRIDES:
+// $mdc-typography-styles-headline1: (
+//   font-family: "Arial, Helvetica, sans-serif";
+// );
+// $mdc-typography-styles-headline2: (
+//   font-family: "Arial, Helvetica, sans-serif";
+// );
+@import "material-components-web/material-components-web";
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
