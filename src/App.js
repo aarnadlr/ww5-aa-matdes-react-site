@@ -1,32 +1,138 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Theme } from 'rmwc/Theme';
-import { Button, ButtonIcon } from 'rmwc/Button';
+import React, { Component } from "react";
+import "./App.css";
+import { Button, ButtonIcon } from "rmwc/Button";
+import "../node_modules/tachyons/css/tachyons.min.css";
+import {
+  TopAppBar,
+  TopAppBarRow,
+  TopAppBarSection,
+  TopAppBarNavigationIcon,
+  TopAppBarActionItem,
+  TopAppBarTitle
+} from "rmwc/TopAppBar";
+import { Icon } from "rmwc/Icon";
 
 class App extends Component {
   render() {
     return (
-    <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="App bg-silver">
+        <TopAppBar className="bg-red" prominent onNav={() => console.log("hi")}>
+          <TopAppBarRow>
+            <TopAppBarSection alignStart>
+              {/* <TopAppBarNavigationIcon use="menu" /> */}
+              <TopAppBarTitle>Aaron Adler</TopAppBarTitle>
+            </TopAppBarSection>
 
-        <Button raised theme="primary-bg on-primary">Primary World</Button>
-        <Button raised theme="secondary-bg on-secondary">Secondary World</Button>
-        <Button outlined theme="secondary-bg on-secondary" >Hello World</Button>
-        <Button>Default</Button>
-        <Button><ButtonIcon use="favorite" /> With Icon</Button>
-        <Button raised>Raised</Button>
-        <Button dense>Dense</Button>
-        <Button unelevated>Unelevated</Button>
-        <Button outlined>Outlined</Button>
-        <Button raised theme="secondary-bg on-secondary">With Theme</Button>
-     
+            <TopAppBarSection alignEnd>
+
+
+
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="1">
+                  <a href="https://www.toptal.com/designers/resume/aaron-adler" target="_blank" rel="noopener noreferrer">
+                    <svg style={{ width: '24px', height: '24px' }} strategy="component" id='Toptal' viewBox="0 0 181.87 265.1">
+                      <path fill='white' d="M91.37,63.27l-42.61-42L70.43,0,181.87,111.07,91.46,200.92l42.65,41.72L111.64,265.1,0,154ZM62.12,171.48l68.77-67.07L116.3,90.18c-11.35,11.43-23,23.23-34.77,35Q66.4,140.4,51.21,155.58c-1.44,1.45-3.09,2.72-.77,4.86C54.71,164.37,58.88,168.41,62.12,171.48Z" />
+                    </svg>
+                  </a>
+                </Icon>
+              </TopAppBarActionItem>
+
+
+
+
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="1">
+                <a href="https://dribbble.com/aarnadlr" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    strategy="component"
+                    id="dribbble"
+                    viewBox="0 0 186.846 186.846"
+                    style={{ width: "24px", height: "24px" }}>
+                    <path fill='white'
+                      d="M93.423,0.001C41.909,0.001,0,41.91,0,93.423s41.909,93.422,93.423,93.422s93.423-41.909,93.423-93.422S144.937,0.001,93.423,0.001z M154.303,44.061c10.488,12.91,16.945,29.205,17.482,46.968c-19.428-4.022-37.02-3.55-52.55-0.505c-2.812-6.576-5.723-12.841-8.661-18.762C127.487,64.476,142.211,55.17,154.303,44.061z M143.779,33.365c-12.003,10.956-25.913,19.068-40.156,25.057C93.169,39.305,83.167,24.909,77.074,16.728c5.276-1.124,10.743-1.727,16.349-1.727C112.58,15.001,130.145,21.915,143.779,33.365z M61.924,21.627c4.601,5.962,15.56,20.89,27.332,42.129C59.67,73.395,30.962,75.019,17.167,75.17C22.917,51.15,39.738,31.399,61.924,21.627z M15.082,90.208c0.148,0,0.291,0.001,0.442,0.001c9.532,0,26.996-0.641,47.556-4.39c11.73-2.139,22.853-5.018,33.29-8.586c2.717,5.415,5.418,11.127,8.037,17.114c-14.614,4.705-26.938,11.475-36.7,18.197c-16.37,11.273-27.838,23.78-34.1,31.513C22.013,130.384,15,112.712,15,93.423C15,92.345,15.038,91.276,15.082,90.208z M44.416,154.582c5.391-6.788,16.364-19.143,32.237-29.984c10.787-7.368,21.947-12.842,33.436-16.435c6.666,17.278,12.357,36.369,15.75,56.64c-9.888,4.508-20.858,7.042-32.416,7.042C74.891,171.845,57.852,165.37,44.416,154.582z M139.639,156.726c-3.497-18.617-8.712-36.122-14.741-52.12c14.83-2.502,30.157-1.986,45.899,1.55C167.402,126.846,155.889,144.83,139.639,156.726z"/>
+                  </svg>
+                  </a>
+                </Icon>
+              </TopAppBarActionItem>
+
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="2">
+                <a href="https://medium.com/@aaronadler" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    strategy="component"
+                    id="medium"
+                    viewBox="0 0 483.86 483.86"
+                    style={{ width: "24px", height: "24px" }}>
+                      <path fill='white' d="M483.86,112.345h-26.699c-6.952,0-25.143,7.552-25.143,13.981v233.467c0,6.445,18.191,11.729,25.143,11.729h26.699v51.835H311.052v-51.835h34.57V129.615h-6.016L256.42,423.356h-64.406l-82.11-293.741h-6.219v241.906h34.555v51.835H0v-51.835h19.173c7.527,0,15.383-5.283,15.383-11.729V126.326c0-6.43-7.855-13.981-15.383-13.981H0V60.504h179.155l58.496,207.342h1.574l59.073-207.342H483.86V112.345z"/>
+                  </svg>
+                  </a>
+                </Icon>
+              </TopAppBarActionItem>
+
+              
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="4">
+                <a href="https://www.linkedin.com/in/aaronadler/" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    strategy="component"
+                    id="linkedIn"
+                    viewBox="0 0 430.117 430.118"
+                    style={{ width: "24px", height: "24px" }}
+                  >
+                    <g>
+                      <path fill='white'
+                        id="LinkedIn__x28_alt_x29_"
+                        d="M398.355,0H31.782C14.229,0,0.002,13.793,0.002,30.817v368.471c0,17.025,14.232,30.83,31.78,30.83h366.573c17.549,0,31.76-13.814,31.76-30.83V30.817C430.115,13.798,415.904,0,398.355,0z M130.4,360.038H65.413V165.845H130.4V360.038z M97.913,139.315h-0.437c-21.793,0-35.92-14.904-35.92-33.563c0-19.035,14.542-33.535,36.767-33.535c22.227,0,35.899,14.496,36.331,33.535C134.654,124.415,120.555,139.315,97.913,139.315z M364.659,360.038h-64.966V256.138c0-26.107-9.413-43.921-32.907-43.921c-17.973,0-28.642,12.018-33.327,23.621c-1.736,4.144-2.166,9.94-2.166,15.728v108.468h-64.954c0,0,0.85-175.979,0-194.192h64.964v27.531c8.624-13.229,24.035-32.1,58.534-32.1c42.76,0,74.822,27.739,74.822,87.414V360.038z M230.883,193.99c0.111-0.182,0.266-0.401,0.42-0.614v0.614H230.883z"
+                      />
+                    </g>
+                  </svg>
+                  </a>
+                </Icon>
+              </TopAppBarActionItem>
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="5">
+                <a href="https://github.com/aarnadlr" target="_blank" rel="noopener noreferrer">
+                <svg style={{width: '24px', height: '24px'}} strategy="component" id="github" 
+	 viewBox="0 0 512 512" >
+		<path fill='white' d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496c22.848,39.264,59.936,27.936,74.528,21.344c2.304-16.608,8.928-27.936,16.256-34.368c-56.832-6.496-116.608-28.544-116.608-127.008c0-28.064,9.984-51.008,26.368-68.992c-2.656-6.496-11.424-32.64,2.496-68c0,0,21.504-6.912,70.4,26.336c20.416-5.696,42.304-8.544,64.096-8.64c21.728,0.128,43.648,2.944,64.096,8.672c48.864-33.248,70.336-26.336,70.336-26.336c13.952,35.392,5.184,61.504,2.56,68c16.416,17.984,26.304,40.928,26.304,68.992c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z"/>
+</svg>
+</a>
+
+                </Icon>
+              </TopAppBarActionItem>
+              <TopAppBarActionItem aria-label="" alt="">
+                <Icon className="6">
+                <a href="https://twitter.com/aaronadler" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    strategy="component"
+                    style={{ width: "24px", height: "24px" }}
+                    id="twitter"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 612 612"
+                  >
+                        <path fill='white' d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" />
+                  </svg>
+                  </a>
+                </Icon>
+              </TopAppBarActionItem>
+            </TopAppBarSection>
+          </TopAppBarRow>
+        </TopAppBar>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Button raised theme="primary-bg on-primary">
+          Primary World
+        </Button>
+        <Button raised theme="secondary-bg on-secondary">
+          Secondary World
+        </Button>
       </div>
     );
   }
